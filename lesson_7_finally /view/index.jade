@@ -1,0 +1,11 @@
+head
+  link(rel='stylesheet', href='/file/bower_components/bootstrap/dist/css/bootstrap.css')
+  script(src='/file/bower_components/angular/angular.js')
+  script(src='/file/controller.js')
+body(ng-app='myApp')
+  h1 HI WORLD
+  div(ng-controller='JadeController')
+      label.lead(for='input') Please Enter Your Name:
+      br
+      label.lead(for='input')  Hello {{hello}}
+        input#input.form-control(type='text', ng-model='hello')

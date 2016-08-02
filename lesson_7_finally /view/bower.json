@@ -1,0 +1,28 @@
+{
+  "name": "lesson7_jade",
+  "homepage": "index.jade",
+  "authors": [
+    "Amir Daliri"
+  ],
+  "description": "using Hapi.js to import jade and angular",
+  "main": "index.jade",
+  "keywords": [
+    "jade",
+    "html",
+    "engien",
+    "angular"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-elastic": "^2.5.1",
+    "angular-ui-router": "^0.3.1",
+    "bootstrap": "^3.3.7"
+  }
+}
