@@ -1,0 +1,17 @@
+body{
+  background-color: black;
+}
+input{
+  background-color: #ffd700;
+  padding: 6px;
+  font-size: 2.2em;
+}
+h2{
+  color: #d4c5ad;
+  font: cursive;
+}
+button{
+  background-color: #4776db;
+  padding: 6px;
+  font-size: 2.2em;
+}
