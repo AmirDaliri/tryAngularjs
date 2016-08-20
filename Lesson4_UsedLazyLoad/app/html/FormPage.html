@@ -1,0 +1,62 @@
+<form ng-controller="FormPageCtrl" name="userInfo" novalidate>
+  <label>Full Name:</label>
+  <input type="text" name="fullName" ng-model='fullName' required></input>
+  <span style="color:red;" ng-if="userInfo.fullName.$invalid && userInfo.fullName.$dirty"> The User's Name Is Required</span>
+  <span style="color:#66ff33;" ng-if="userInfo.fullName.$valid" class="glyphicon glyphicon-ok" aria-hidden="true" > </span>
+  <br></br>
+  <label>Password:</label>
+  <input type="password" name="password" ng-model='password' required></input>
+  <span style="color:red;" ng-if="userInfo.password.$invalid && userInfo.password.$dirty"> The User's Password Is Required</span>
+  <span style="color:#66ff33;" ng-if="userInfo.password.$valid" class="glyphicon glyphicon-ok" aria-hidden="true" > </span>
+  <br></br>
+  <label>About me:</label><br>
+  <textarea class="msd-elastic"  required  name='aboutMe'  ng-model='aboutMe'></textarea>
+  <span style="color:red;" ng-if="userInfo.aboutMe.$invalid && userInfo.aboutMe.$dirty"> The User's AboutMe is required </span>
+  <span style="color:#66ff33;" ng-if="userInfo.aboutMe.$valid" class="glyphicon glyphicon-ok" aria-hidden="true" > </span>
+  <br></br>
+  <label>Country:</label>
+  <select ng-model="countrySelected" id="countrySelected" name="countrySelected" required class="selectpicker">
+    <option selected   value="">Pls Select Your Country</option>
+    <option>Iran</option>
+    <option>China</option>
+    <option>Usa</option>
+  </select>
+  <span style="color:red" ng-if="userInfo.countrySelected.$invalid && userInfo.countrySelected.$dirty">
+    <span >Country Is Required</span>
+  </span>
+  <span style="color:#66ff33;" ng-if="userInfo.countrySelected.$valid" class="glyphicon glyphicon-ok" aria-hidden="true" > </span>
+  <br></br>
+  <label>Whats Your Favorites Food?</label><br>
+  <label>Pisa:
+    <input type="checkbox" ng-model="checkboxModel.Pisa"
+    ng-true-value="Yea Pisa Its My Favorites :)" ng-false-value="nop :\">
+  </label><br/>
+  <label>sushi:
+    <input type="checkbox" ng-model="checkboxModel.sushi"
+    ng-true-value="Sushi? Really?!!  " ng-false-value="ok">
+  </label><br/>
+  <tt>{{checkboxModel.Pisa}}</tt><br/>
+  <tt>{{checkboxModel.sushi}}</tt><br/>
+  <label>Select gender</label>
+  <label><input type="radio" name="genderGroup" ng-rquired="!item.Id" ng-change="RadioChange('Male')" ng-model="item.Id" value="Male" />Male
+    <input type="radio" name="genderGroup" ng-rquired="!item.Id" ng-change="RadioChange('Female')" ng-model="item.Id" value="Female" />Female
+    <input type="radio" name="genderGroup" ng-rquired="!item.Id" ng-change="RadioChange('Female')" ng-model="item.Id" value="Other" />Other
+    {{item.Text}}
+  </label>
+  <div>
+    <span style="color:red" ng-if="userInfo.genderGroup.$invalid">
+    <span>Gender Is Required</span>
+    <span style="color:#66ff33;" ng-if="!item.Id"class="glyphicon glyphicon-ok" aria-hidden="true" > </span>
+  </div>
+  <p>
+    You have clikced on: {{ item.Id }}
+  </p><br>
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg"  ng-disabled="userInfo.$invalid && !userInfo.$untouched">submit</button>
+    <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <h1 class="modalBox">Your Form Creted</h1>
+        </div>
+      </div>
+    </div>
+</form>
