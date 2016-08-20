@@ -1,0 +1,21 @@
+{
+  "name": "hapi-jade",
+  "version": "0.0.0",
+  "description": "Create a simple hapiJS server to serve view file",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "hapi",
+    "jade",
+    "nodeJS"
+  ],
+  "author": "Elahe Bahari",
+  "license": "ISC",
+  "dependencies": {
+    "hapi": "^13.5.0",
+    "inert": "^4.0.1",
+    "vision": "^4.1.0"
+  }
+}
