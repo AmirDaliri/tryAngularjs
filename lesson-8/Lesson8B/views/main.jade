@@ -1,0 +1,25 @@
+doctype html5
+html(ng-app='myApp')
+  head
+    title Lesson8
+    script(src='./bower_components/jquery/dist/jquery.min.js')
+    script(src='./bower_components/angular/angular.min.js')
+    link(href='./bower_components/bootstrap/dist/css/bootstrap.min.css',rel='stylesheet')
+    script(scr='./bower_components/bootstrap/dist/js/bootstrap.min.js')
+    script(src='./bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js')
+    script(src='./bower_components/angular-bootstrap/ui-bootstrap.min.js')
+    script(src='./bower_components/angular-ui-router/release/angular-ui-router.min.js')
+    script(src='./js/app.js')
+    script(src='./js/postService.js')
+    script(src='./js/homeController.js')
+    script(src='./js/MainController.js')
+    link(href='./js/styleSheet.css',rel='stylesheet')
+    body
+      div(ng-controller="MainController" class='row')
+        div(row)
+          ul(class="nav nav-tabs")
+            li(ng-repeat='tab in tabs' ng-show='showMenue(tab)'   active='{{tab.active}}')
+              a(data-toggle="tab" ui-sref='{{tab.route}}')  {{tab.heading}} 
+        div(class='tab-content')
+          div(ui-view=' ')
+              

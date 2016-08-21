@@ -1,0 +1,24 @@
+body{
+  padding:3%;
+  background-color: #999966;
+  /*color: black;*/
+}
+.homeClass{
+  color:white;
+  background-color: black;
+  padding: 3%;
+  color: #ff9900;
+}
+.PostClass{
+  /*background: red;*/
+  padding: 3;
+}
+#Leave_Comment,#Show_Comments,#Comment2post,#name2post{
+  padding: 3%;
+}
+#No_Comment{
+  padding: 3%;
+}
+.loginClass{
+  background-color: black;
+}
