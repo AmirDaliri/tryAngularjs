@@ -1,8 +1,0 @@
-div(ng-controller="mainController" class='row')
-  div(row)
-    ul(class="nav nav-tabs")
-      li(ng-repeat='tab in tabs' ng-show='showMenue(tab)'   active='{{tab.active}}')
-        a(data-toggle="tab" ui-sref='{{tab.route}}')  {{tab.heading}} 
-  div(class='tab-content')
-    div(ui-view=' ')
-              
