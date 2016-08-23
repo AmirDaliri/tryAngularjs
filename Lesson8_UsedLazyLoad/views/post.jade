@@ -1,0 +1,45 @@
+div(ng-controller="postController")
+  div(class='row Panelmargin')
+    div(class='row paddingRightDiv borderdashedDetail paddingLeftDiv') 
+      div(class='col-md-12 rowHeight')
+        span(class='title') {{selectedPost.title}}
+      div(class='col-md-12 rowHeight')
+        textarea(class='blogBody paddingLeftControl') {{selectedPost.body}}
+      div(class='col-md-12 rowHeight')
+        span(class='detail') {{selectedPost.author}}
+      div(class='row rowHeight detail')
+        div.col-md-12
+          a(ng-click='displayCommentInsertion()' id='Leave_Comment' ng-show='showCommentInsertionPart') Leave Comment
+          a(ng-click='displayCommentInsertion()' id='No_Comment' ng-show='showNoCommentInsertionPart') Hide Comment Insertion
+        div.col-md-12
+          a(ng-click='displayComments()' id='Show_Comments' ng-show='showCommentsPart') Show Comments
+          a(ng-click='displayComments()' id='No_Comments' ng-show='showNoCommentsPart') Hide Comments
+    div(class='row insertComment noDisplay borderDetail marginVert' id='insertComment')
+        div(class='row rowHeight')
+           div(class='col-md-2')
+             span.floatRight.white Name:
+           div(class='col-md-7')
+             input(type='text' class='form-control widthControl' placeholder='Your Name')
+           div(class='col-md-3')
+        div(class='row rowHeight')
+           div(class='col-md-2')
+             span.floatRight.white  Comment:
+           div(class='col-md-7')
+             textarea(class='commentBody')
+           div(class='col-md-3')
+        div(class='row rowHeight')
+          div.col-md-2
+          div.col-md-7
+            button(class='btn regbtn') register
+          div.col-md-3
+    div(class='row paddingRightDiv PaddingLeftDiv marginVert noDisplay borderDetail' id='commentsPart')
+      div.col-md-12
+        div.col-md-1
+        div.col-md-9.paddingAll
+          span.white Name said:
+          textarea(class='commentBody')
+        div.col-md-2
+     
+      
+
+          
