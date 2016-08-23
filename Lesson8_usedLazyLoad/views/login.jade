@@ -1,0 +1,21 @@
+div(ng-controller="loginController")
+  div(class='panel panel-primary Panelmargin panelSize') 
+    div(class='panel-heading')
+      h3(class='panel-title') Please Login
+    div(class='panel-body')
+      div(class='row rowHeight paddingLeftDiv')
+        div(class='col-md-2 PaddingRightControl')
+          span(class='floatRight') Email:
+        div(class='col-md-10 paddingLeftDiv paddingRightDiv')
+          div(class='widthControl input-group')
+            input(type='text' ng-model='emailModel' class='form-control' placeholder="your Id" aria-describedby="email")
+            span(class='input-group-addon' id='email') @house.com
+      div(class='row rowHeight paddingLeftDiv')
+        div(class='col-md-2 PaddingRightControl')
+          span(class='floatRight') Password:
+        div(class='col-md-10 ')
+          input(type='password' ng-model='passModel' class='form-control widthControl' placeholder='Password')
+      div(class='row paddingLeftDiv')
+        button(class='btn regbtn' ng-click='login()') login 
+
+
